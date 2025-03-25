@@ -8,3 +8,11 @@ div {
 h1,h2 {
     color: red;
 }
+
+h1:hover{
+    color:green;
+    transition: background-color 2s;
+}
+h1:hover{
+    background-color: yellow;
+}
