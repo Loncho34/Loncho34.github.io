@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turno Ajedrez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #turno {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cambio de Turno</h2>
+    <p id="turno">Turno Blancas</p>
+    <button onclick="cambiarTurno()">Cambiar Turno</button>
+
+    <script>
+        let turno = "blancas"; // Inicia con el turno de las blancas
+
+        function cambiarTurno() {
+            // Cambia el turno entre Blancas y Negras
+            turno = (turno === "blancas") ? "negras" : "blancas";
+
+            // Actualiza el texto en pantalla
+            document.getElementById("turno").innerText = `Turno ${turno.charAt(0).toUpperCase() + turno.slice(1)}`;
+        }
+    </script>
+</body>
+</html>
