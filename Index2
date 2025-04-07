@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partida de Ajedrez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td, th {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid black;
+        }
+        .blanca {
+            background-color: #fcdebc;
+        }
+        .negra {
+            background-color: #856347;
+        }
+        .label {
+            font-weight: bold;
+            background-color: lightgray;
+        }
+        #historial {
+            height: 100px;
+            overflow-y: auto;
+            border: 1px solid black;
+            margin: 10px auto;
+            width: 200px;
+            text-align: left;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Partida de Ajedrez</h2>
+    <p id="turno">Turno de: Blancas</p>
+    
+    <table id="tablero">
+        <tr>
+            <td class="blanca" id="A8">♜</td><td class="negra" id="B8">♞</td><td class="blanca" id="C8">♝</td><td class="negra" id="D8">♛</td>
+            <td class="blanca" id="E8">♚</td><td class="negra" id="F8">♝</td><td class="blanca" id="G8">♞</td><td class="negra" id="H8">♜</td><th>8</th>
+        </tr>
+        <tr>
+            <td class="negra" id="A7">♟</td><td class="blanca" id="B7">♟</td><td class="negra" id="C7">♟</td><td class="blanca" id="D7">♟</td>
+            <td class="negra" id="E7">♟</td><td class="blanca" id="F7">♟</td><td class="negra" id="G7">♟</td><td class="blanca" id="H7">♟</td><th>7</th>
+        </tr>
+        <tr>
+            <td class="blanca" id="A6"></td><td class="negra" id="B6"></td><td class="blanca" id="C6"></td><td class="negra" id="D6"></td>
+            <td class="blanca" id="E6"></td><td class="negra" id="F6"></td><td class="blanca" id="G6"></td><td class="negra" id="H6"></td><th>6</th>
+        </tr>
+        <tr>
+            <td class="negra" id="A5"></td><td class="blanca" id="B5"></td><td class="negra" id="C5"></td><td class="blanca" id="D5"></td>
+            <td class="negra" id="E5"></td><td class="blanca" id="F5"></td><td class="negra" id="G5"></td><td class="blanca" id="H5"></td><th>5</th>
+        </tr>
+        <tr>
+            <td class="blanca" id="A4"></td><td class="negra" id="B4"></td><td class="blanca" id="C4"></td><td class="negra" id="D4"></td>
+            <td class="blanca" id="E4"></td><td class="negra" id="F4"></td><td class="blanca" id="G4"></td><td class="negra" id="H4"></td><th>4</th>
+        </tr>
+        <tr>
+            <td class="negra" id="A3"></td><td class="blanca" id="B3"></td><td class="negra" id="C3"></td><td class="blanca" id="D3"></td>
+            <td class="negra" id="E3"></td><td class="blanca" id="F3"></td><td class="negra" id="G3"></td><td class="blanca" id="H3"></td><th>3</th>
+        </tr>
+        <tr>
+            <td class="blanca" id="A2">♙</td><td class="negra" id="B2">♙</td><td class="blanca" id="C2">♙</td><td class="negra" id="D2">♙</td>
+            <td class="blanca" id="E2">♙</td><td class="negra" id="F2">♙</td><td class="blanca" id="G2">♙</td><td class="negra" id="H2">♙</td><th>2</th>
+        </tr>
+        <tr>
+            <td class="negra" id="A1">♖</td><td class="blanca" id="B1">♘</td><td class="negra" id="C1">♗</td><td class="blanca" id="D1">♕</td>
+            <td class="negra" id="E1">♔</td><td class="blanca" id="F1">♗</td><td class="negra" id="G1">♘</td><td class="blanca" id="H1">♖</td><th>1</th>
+        </tr>
+        <tr>
+            <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th>
+        </tr>
+    </table>
+    
+    <button onclick="rendirse()">Rendirse</button>
+    <button onclick="moverPieza()">Mover</button>
+
+    
+
+</body>
+</html>
